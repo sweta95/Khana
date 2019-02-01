@@ -78,9 +78,6 @@ body, html {
   border: 1px solid #000 !important;
   border-radius: 0px !important;
 }
-
-
-
 .nav-tabs > li > a {
   margin-right: 2px;
   line-height: 1.42857143;
@@ -145,3 +142,4 @@ cursor: pointer;
   background-image: url('assets/img/googleicon.png');
   background-size: cover;
 }
+
