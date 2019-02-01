@@ -1,0 +1,98 @@
+<!--<div class="col-md-12">
+  <div class="row blank-row-top"></div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <div class="card w-50 p-3">
+            <div class="card-header">
+              <h3>Sign up</h3>
+            </div>
+            <div class="card-body">
+              <form>
+                <div class="form-group">
+                  <label class="control-label">Mobile Number</label>
+                  <input type="text" class="form-control" placeholder="Mobile Number">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Name</label>
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Email</label>
+                  <input type="text" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Password</label>
+                  <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="row align-items-center remember">
+                  <input type="checkbox">By creating an account, I accept the Terms & Conditions
+                </div>
+                <div class="form-group">
+                  <input type="submit" value="Register" class="btn float-right login_btn">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row blank-row-top"></div>-->
+<div class="row blank-row-top"></div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Sign up</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <mat-hint>Enter 10 digit valid mobile number.</mat-hint>
+            <input matInput type="tel" placeholder="Mobile Number" minlength="10" maxlength="10" [formControl]="mobile"
+              required>
+            <mat-hint align="end">{{mobile.value.length}} / 10</mat-hint>
+            <mat-error *ngIf="mobile.invalid">Enter 10 digit valid mobile number.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <mat-hint>Enter your full name.</mat-hint>
+            <input matInput type="text" placeholder="Full Name" minlength="3" [formControl]="name" required>
+            <mat-error *ngIf="name.invalid">Enter your full name.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" [formControl]="email" required>
+            <mat-hint>Enter your email address.</mat-hint>
+            <mat-error *ngIf="email.invalid">Enter valid email Id.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter your password" [type]="hidePassword ? 'password' : 'text'" [formControl]="password" minlength="8"
+              required>
+            <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+            <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="password.invalid">Use 8 or more characters with a mix of letters, numbers & symbols.</mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Confirm Password</mat-label>
+              <input minlength="8" matInput placeholder="Confirm password" [type]="hideConfirmPassword ? 'password' : 'text'" [formControl]="confirmpassword"
+                required>
+              <mat-hint>Enter password again.</mat-hint>
+              <mat-icon matSuffix (click)="hideConfirmPassword = !hideConfirmPassword">{{hideConfirmPassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+              <mat-error ng-if="!(confirmpassword.value == password.value)">Password and confirm password mismatch.</mat-error>
+              <!--<mat-error>{{confirmpassword.value !== password.value?'Password and confirm password mismatch':''}}</mat-error>-->
+            </mat-form-field>
+          <mat-checkbox>By creating an account, I accept the Terms & Conditions</mat-checkbox>
+        </mat-card-content>
+        <mat-card-actions align="end">
+            <button mat-button>Register</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="row blank-row-top"></div>

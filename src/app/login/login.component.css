@@ -1,0 +1,32 @@
+.container{
+height: 100%;
+align-content: center;
+}
+.example-card 
+{
+max-width: 400px;
+float:center;
+}
+
+.footer
+{
+float: center;
+text-align:center!important;
+}
+
+button, input, optgroup, select, textarea 
+{
+float: right;
+}
+div p{
+text-align:center!important;
+}
+
+.mat-form-field {
+display: block!important;
+position: relative;
+text-align: left;
+}
+
+
+    

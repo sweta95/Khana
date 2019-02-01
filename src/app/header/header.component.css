@@ -1,0 +1,8 @@
+.fixed-top{
+    position: relative!important;
+}
+.bg-dark{
+    background-color:#837711!important;
+}
+
+footer {margin-left:0px;background-color:#837711;width: 100%;bottom: 0;left:0;position: relative; min-height:200px; padding:10px 0px 15px 0px ;}
