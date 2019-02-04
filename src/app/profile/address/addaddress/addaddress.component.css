@@ -1,0 +1,19 @@
+.required-indicator {
+    color: #e22723;
+  }
+  
+  .addaddresscard{
+    margin:0px 10px 10px 0px;
+   
+  }
+
+ .userdetail-container {
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    padding:20px;
+  }
+  .userdetail-container > * {
+    width: 100%;
+  }
+  

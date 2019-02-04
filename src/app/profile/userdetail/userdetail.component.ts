@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-userdetail',
   templateUrl: './userdetail.component.html',
-  styles: [`.example-container {
+  styles: [`.userdetail-container {
     display: flex;
     flex-direction: column;
     background-color:white;
     padding:20px;
   }
-  .example-container > * {
+  .userdetail-container > * {
     width: 100%;
   }`]
 })

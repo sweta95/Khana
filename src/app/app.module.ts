@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UserprofileComponent } from './profile/userprofile.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
@@ -22,10 +22,11 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSidenavModule, MatToolbarModule, MatIconModule} from '@angular/material';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { UserdetailComponent } from './userdetail/userdetail.component';
-import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
-import { FavouriteordersComponent } from './favouriteorders/favouriteorders.component';
-import { ManageaddressComponent } from './manageaddress/manageaddress.component';
+import { UserdetailComponent } from './profile/userdetail/userdetail.component';
+import { OrderhistoryComponent } from './profile/orderhistory/orderhistory.component';
+import { FavouriteordersComponent } from './profile/favouriteorders/favouriteorders.component';
+import { ManageaddressComponent } from './profile/address/manageaddress/manageaddress.component';
+import { AddaddressComponent } from './profile/address/addaddress/addaddress.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +42,8 @@ import { ManageaddressComponent } from './manageaddress/manageaddress.component'
     UserdetailComponent,
     OrderhistoryComponent,
     FavouriteordersComponent,
-    ManageaddressComponent
+    ManageaddressComponent,
+    AddaddressComponent
   ],
   imports: [
     BrowserModule,

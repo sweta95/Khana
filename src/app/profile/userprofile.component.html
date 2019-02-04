@@ -1,0 +1,43 @@
+<div class="row blank-row-top"></div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <mat-card class="userprofilecard">
+            <mat-card-header>
+              <div mat-card-avatar class="profileimage"></div>
+              <mat-card-title>UserName</mat-card-title>
+              <mat-card-subtitle>Location</mat-card-subtitle>
+            </mat-card-header>
+          </mat-card>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div aria-orientation="vertical">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/profile/userdetail">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/profile/manageaddress">Manage Address</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"routerLink="/profile/orderhistory">Order History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/profile/favouriteorders">Favourite Order</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row blank-row-top"></div>

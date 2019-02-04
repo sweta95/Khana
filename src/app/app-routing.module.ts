@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import {RouterModule,Routes} from '@angular/router';
-import { UserprofileComponent } from './userprofile/userprofile.component';
+import { UserprofileComponent } from './profile/userprofile.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
-import { UserdetailComponent } from './userdetail/userdetail.component';
-import { OrderhistoryComponent } from './orderhistory/orderhistory.component';
-import { FavouriteordersComponent } from './favouriteorders/favouriteorders.component';
-import { ManageaddressComponent } from './manageaddress/manageaddress.component';
+import { UserdetailComponent } from './profile/userdetail/userdetail.component';
+import { OrderhistoryComponent } from './profile/orderhistory/orderhistory.component';
+import { FavouriteordersComponent } from './profile/favouriteorders/favouriteorders.component';
+import { ManageaddressComponent } from './profile/address/manageaddress/manageaddress.component';
+import { AddaddressComponent } from './profile/address/addaddress/addaddress.component';
 
 
 const routes: Routes = [
@@ -21,12 +22,14 @@ const routes: Routes = [
   { path: 'signup', component:  SignupComponent }, 
   { path: 'forgotpassword', component:  ForgotpasswordComponent},
   
-  { path: 'userprofile', component: UserprofileComponent ,
+  { path: 'profile', component: UserprofileComponent ,
   children:[
     {path:'userdetail',component:UserdetailComponent},
     {path:'orderhistory',component:OrderhistoryComponent},
     {path:'favouriteorders',component:FavouriteordersComponent},
-    {path:'manageaddress',component:ManageaddressComponent},
+    {path:'manageaddress',component:ManageaddressComponent,
+     children:[{path:'addaddress', component:AddaddressComponent}]
+     },
     {path:'usersettings',component:SignupComponent},
   ]},
   { path: 'FavouriteOrders', component: UserprofileComponent },
